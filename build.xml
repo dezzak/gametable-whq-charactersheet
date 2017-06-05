@@ -5,9 +5,12 @@
 
     <!-- project specific properties -->
     <property name="projectdisplayname" value="GameTable-WHQ-Charactersheet" />
-    <property name="version" value="1.0.0" />
+    <property name="version" value="0.9.0" />
     <property name="projectname" value="gametable-whq-charactersheet" />
+
+    <!-- Gametable plugin stuff -->
     <property name="entrypoint" value="uk.co.dezzanet.gametable.charactersheet.CharacterSheetPlugin" />
+    <property name="gametableMinVersion" value="1.1.0" />
 
     <!-- set top-level dir properties -->
     <property name="doc" value="doc" />
@@ -73,7 +76,8 @@
         <!-- create jar -->
         <jar destfile="${jar.preopt.dest}" basedir="${jar.src}">
             <manifest>
-                <attribute name="Main-Class" value="${entrypoint}" />
+                <attribute name="Gametable-Plugin" value="${entrypoint}" />
+                <attribute name="Gametable-min-version" value="${gametableMinVersion}" />
             </manifest>
         </jar>
         
@@ -87,14 +91,7 @@
         <zip destfile="${export}/gametable-whq-charactersheet-${version}.zip">
 
             <file file="${jar.dest}" basedir="${export}" />
-
-            <zipfileset dir="environment" prefix="environment" />
-            <zipfileset dir="language" prefix="language" />
         </zip>
-
-        <copy todir="${export}/language">
-            <fileset dir="language"/>
-        </copy>
 
     </target>
 
