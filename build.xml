@@ -28,7 +28,6 @@
     <property name="jar.preopt.filename" value="${projectname}.preopt.jar" />
     <property name="jar.preopt.dest" value="${gen}/${jar.preopt.filename}" />
     <property name="jar.dest" value="${jar.filename}" />
-    <property name="versionClass.dest" value="${src}/co/tkjn/gametable/GametableVersion.java" />
 
     <property name="doc.dest" value="${doc}" />
     <property name="api.dest" value="${doc}/api" />
@@ -44,6 +43,7 @@
         <!-- Create the build directory structure used by compile -->
         <mkdir dir="${jar.src}" />
         <mkdir dir="${classes.dest}" />
+        <mkdir dir="${lib}" />
 
         <!-- Compile the java code -->
         <javac srcdir="${java.src}"
