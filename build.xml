@@ -30,6 +30,7 @@
     <property name="jar.filename" value="${export}/${projectname}.jar" />
     <property name="jar.preopt.filename" value="${projectname}.preopt.jar" />
     <property name="jar.preopt.dest" value="${gen}/${jar.preopt.filename}" />
+    <property name="jar.services" value="${jar.src}/META-INF/services" />
     <property name="jar.dest" value="${jar.filename}" />
 
     <property name="doc.dest" value="${doc}" />
@@ -47,6 +48,7 @@
         <mkdir dir="${jar.src}" />
         <mkdir dir="${classes.dest}" />
         <mkdir dir="${lib}" />
+        <mkdir dir="${jar.services}" />
 
         <!-- Compile the java code -->
         <javac srcdir="${java.src}"
@@ -72,6 +74,9 @@
     <target name="build" depends="compile" description="Builds ${projectdisplayname} into an executable jar.">
         <mkdir dir="${zip.src}" />
         <mkdir dir="${export}" />
+
+        <!-- create loader -->
+        <echo file="${jar.services}/package.Plugin">${entrypoint}</echo>
 
         <!-- create jar -->
         <jar destfile="${jar.preopt.dest}" basedir="${jar.src}">
