@@ -76,7 +76,7 @@
         <mkdir dir="${export}" />
 
         <!-- create loader -->
-        <echo file="${jar.services}/package.Plugin">${entrypoint}</echo>
+        <echo file="${jar.services}/com.galactanet.gametable.IGametablePlugin">${entrypoint}</echo>
 
         <!-- create jar -->
         <jar destfile="${jar.preopt.dest}" basedir="${jar.src}">
