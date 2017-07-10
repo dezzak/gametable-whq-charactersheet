@@ -81,7 +81,7 @@ public class CharacterDataStorage {
 		}
 		catch (IOException e) {
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, e.toString(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, e.toString(), "Error Message", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 		finally {
@@ -140,9 +140,9 @@ public class CharacterDataStorage {
 			return writer.toString();
 			
 		} catch (ParserConfigurationException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
 		} catch (TransformerException e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, e.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		return "";
 	}
@@ -191,15 +191,15 @@ public class CharacterDataStorage {
 		}
 		catch (ParserConfigurationException pce) {
 			savePath = null;
-			JOptionPane.showMessageDialog(null, pce.getMessage(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, pce.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		catch (SAXException se) {
 			savePath = null;
-			JOptionPane.showMessageDialog(null, se.getMessage(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, se.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 		catch (IOException ioe) {
 			savePath = null;
-			JOptionPane.showMessageDialog(null, ioe.getMessage(), "Error Massage", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, ioe.getMessage(), "Error Message", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	

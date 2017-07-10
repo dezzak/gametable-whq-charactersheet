@@ -46,7 +46,7 @@ public class GoldDialogue extends JDialog {
                     dispose();
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "Error: Please enter an integer for gold", "Error Massage", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Error: Please enter an integer for gold", "Error Message", JOptionPane.ERROR_MESSAGE);
                 }
             }
         };
